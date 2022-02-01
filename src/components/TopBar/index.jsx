@@ -1,7 +1,8 @@
 import { AppBar, Typography, Toolbar, Box, Button } from '@mui/material';
 import React from 'react';
 
-export const TopBar = () => {
+export const TopBar = (setPage) => {
+    // setPage 
   return (
     <AppBar>
       <Toolbar disableGutters>
