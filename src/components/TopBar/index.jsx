@@ -10,20 +10,28 @@ export const TopBar = (obj) => {
   // setPage is used to set the current displayed page(content) component in TopBar's parent(App)
 
   return (
-    <AppBar>
-      <Toolbar disableGutters>
+    <AppBar position="relative">
+      {/* sticky or not???? */}
+      <Toolbar style={{ paddingRight: 0, background: '#51a488' }}>
+        {/* disable gutter? */}
         <Typography
           variant="h4"
-          noWrap
+          // noWrap
           component="div"
           sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
+          color="#2e2e2e"
         >
           结合褍源咨询
         </Typography>
         <Box
+          style={{ paddingRight: 0, background: '#66CDAA' }}
           sx={{
             flexGrow: 1,
-            display: { xs: 'none', md: 'flex', justifycontent: 'space-evenly' },
+            display: {
+              xs: 'none',
+              md: 'flex',
+              justifycontent: 'space-evenly',
+            },
           }}
         >
           <Button

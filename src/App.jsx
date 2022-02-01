@@ -8,10 +8,12 @@ export const App = () => {
   const [currentPage, setCurrentPage] = useState('home');
   // the TopBar buttons uses setPage() to set the current displayed page. We are not using react redux/ react-router to complicate things up here
   return (
-    <Container maxWidth="xl">
+    <>
       <TopBar setPage={setCurrentPage} currentPage={currentPage} />
-      <Pages page={currentPage} />
-    </Container>
+      <Container maxWidth="xl">
+        <Pages page={currentPage} />
+      </Container>
+    </>
   );
 };
 
