@@ -1,12 +1,13 @@
 import { AppBar, Typography, Toolbar, Box, Button } from '@mui/material';
 import React from 'react';
+import { useState, useEffect } from 'react';
 
-export const TopBar = (setPage) => {
+export const TopBar = (obj) => {
+  const { setPage, currentPage } = obj;
+  // the two arguments are passed down as 1 object!!!! THUS WE MUST USE THE SPREAD OPERATOR here!!!
+
+  // the argument is an object, setPage.setPage is the setState function that we passed down, what the fuck javascript...
   // setPage is used to set the current displayed page(content) component in TopBar's parent(App)
-
-  const onClick = (id) => {
-    setPage = id;
-  };
 
   return (
     <AppBar>
@@ -28,7 +29,9 @@ export const TopBar = (setPage) => {
           <Button
             sx={{ my: 2, color: 'white', display: 'block' }}
             id="home"
-            onClick={onClick('home')}
+            onClick={() => {
+              setPage('home');
+            }}
           >
             <Typography variant="h6">首页</Typography>
           </Button>
@@ -36,49 +39,63 @@ export const TopBar = (setPage) => {
           <Button
             sx={{ my: 2, color: 'white', display: 'block' }}
             id="register"
-            onClick={onClick('register')}
+            onClick={() => {
+              setPage('register');
+            }}
           >
             <Typography variant="h6">公司注册服务</Typography>
           </Button>
           <Button
             sx={{ my: 2, color: 'white', display: 'block' }}
             id="immigration"
-            onClick={onClick('immigration')}
+            onClick={() => {
+              setPage('immigration');
+            }}
           >
             <Typography variant="h6">移民投资咨询</Typography>
           </Button>
           <Button
             sx={{ my: 2, color: 'white', display: 'block' }}
             id="business"
-            onClick={onClick('business')}
+            onClick={() => {
+              setPage('business');
+            }}
           >
             <Typography variant="h6">商务运营</Typography>
           </Button>
           <Button
             sx={{ my: 2, color: 'white', display: 'block' }}
             id="news"
-            onClick={onClick('news')}
+            onClick={() => {
+              setPage('news');
+            }}
           >
             <Typography variant="h6">新闻动态</Typography>
           </Button>
           <Button
             sx={{ my: 2, color: 'white', display: 'block' }}
             id="questions"
-            onClick={onClick('questions')}
+            onClick={() => {
+              setPage('questions');
+            }}
           >
             <Typography variant="h6">常见问题</Typography>
           </Button>
           <Button
             sx={{ my: 2, color: 'white', display: 'block' }}
             id="aboutUs"
-            onClick={onClick('aboutUs')}
+            onClick={() => {
+              setPage('aboutUs');
+            }}
           >
             <Typography variant="h6">关于我们</Typography>
           </Button>
           <Button
             sx={{ my: 2, color: 'white', display: 'block' }}
             id="contactUs"
-            onClick={onClick('contactUs')}
+            onClick={() => {
+              setPage('contactUs');
+            }}
           >
             <Typography variant="h6"> 联系我们</Typography>
           </Button>
