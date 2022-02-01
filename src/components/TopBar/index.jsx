@@ -2,7 +2,12 @@ import { AppBar, Typography, Toolbar, Box, Button } from '@mui/material';
 import React from 'react';
 
 export const TopBar = (setPage) => {
-    // setPage 
+  // setPage is used to set the current displayed page(content) component in TopBar's parent(App)
+
+  const onClick = (id) => {
+    setPage = id;
+  };
+
   return (
     <AppBar>
       <Toolbar disableGutters>
@@ -23,7 +28,7 @@ export const TopBar = (setPage) => {
           <Button
             sx={{ my: 2, color: 'white', display: 'block' }}
             id="home"
-            onClick={() => {}}
+            onClick={onClick('home')}
           >
             <Typography variant="h6">首页</Typography>
           </Button>
@@ -31,49 +36,49 @@ export const TopBar = (setPage) => {
           <Button
             sx={{ my: 2, color: 'white', display: 'block' }}
             id="register"
-            onClick={() => {}}
+            onClick={onClick('register')}
           >
             <Typography variant="h6">公司注册服务</Typography>
           </Button>
           <Button
             sx={{ my: 2, color: 'white', display: 'block' }}
             id="immigration"
-            onClick={() => {}}
+            onClick={onClick('immigration')}
           >
             <Typography variant="h6">移民投资咨询</Typography>
           </Button>
           <Button
             sx={{ my: 2, color: 'white', display: 'block' }}
-            id="immigration"
-            onClick={() => {}}
+            id="business"
+            onClick={onClick('business')}
           >
             <Typography variant="h6">商务运营</Typography>
           </Button>
           <Button
             sx={{ my: 2, color: 'white', display: 'block' }}
-            id="immigration"
-            onClick={() => {}}
+            id="news"
+            onClick={onClick('news')}
           >
             <Typography variant="h6">新闻动态</Typography>
           </Button>
           <Button
             sx={{ my: 2, color: 'white', display: 'block' }}
-            id="immigration"
-            onClick={() => {}}
+            id="questions"
+            onClick={onClick('questions')}
           >
             <Typography variant="h6">常见问题</Typography>
           </Button>
           <Button
             sx={{ my: 2, color: 'white', display: 'block' }}
-            id="immigration"
-            onClick={() => {}}
+            id="aboutUs"
+            onClick={onClick('aboutUs')}
           >
             <Typography variant="h6">关于我们</Typography>
           </Button>
           <Button
             sx={{ my: 2, color: 'white', display: 'block' }}
-            id="immigration"
-            onClick={() => {}}
+            id="contactUs"
+            onClick={onClick('contactUs')}
           >
             <Typography variant="h6"> 联系我们</Typography>
           </Button>
