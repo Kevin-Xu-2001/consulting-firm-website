@@ -21,7 +21,7 @@ export const TopBar = (obj) => {
           sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
           color="#2e2e2e"
         >
-          结合褍源咨询
+          结合瑞源咨询
         </Typography>
         <Box
           style={{ paddingRight: 0, background: '#66CDAA' }}
