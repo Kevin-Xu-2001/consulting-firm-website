@@ -1,6 +1,7 @@
 import { AppBar, Typography, Toolbar, Box, Button } from '@mui/material';
 import React from 'react';
-import { useState, useEffect } from 'react';
+// TODO: drawer when phone dimension?
+// TODO: company icon
 
 export const TopBar = (obj) => {
   const { setPage, currentPage } = obj;
@@ -13,29 +14,50 @@ export const TopBar = (obj) => {
     <AppBar position="relative">
       {/* sticky or not???? */}
       <Toolbar style={{ paddingRight: 0, background: '#51a488' }}>
-        {/* disable gutter? */}
         <Typography
           variant="h4"
-          // noWrap
           component="div"
-          sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
+          sx={{
+            mr: 2,
+            display: {
+              xs: 'flex',
+              //what should be shown as the company's logo when xs?
+              sm: 'flex',
+              md: 'flex',
+              lg: 'flex',
+              xl: 'flex',
+              justifycontent: 'space-evenly',
+              whiteSpace: 'nowrap',
+            },
+          }}
           color="#2e2e2e"
         >
-          结合瑞源咨询
+          结合褍源
         </Typography>
         <Box
           style={{ paddingRight: 0, background: '#66CDAA' }}
           sx={{
             flexGrow: 1,
             display: {
-              xs: 'none',
+              xs: 'flex',
+              sm: 'flex',
               md: 'flex',
+              lg: 'flex',
+              xl: 'flex',
               justifycontent: 'space-evenly',
+              whiteSpace: 'nowrap',
             },
+
+            overflow: 'auto',
           }}
         >
           <Button
-            sx={{ my: 2, color: 'white', display: 'block' }}
+            sx={{
+              my: 2,
+              color: 'white',
+              display: 'block',
+              minWidth: 50,
+            }}
             id="home"
             onClick={() => {
               setPage('home');
@@ -45,7 +67,7 @@ export const TopBar = (obj) => {
           </Button>
 
           <Button
-            sx={{ my: 2, color: 'white', display: 'block' }}
+            sx={{ my: 2, color: 'white', display: 'block', minWidth: 130 }}
             id="register"
             onClick={() => {
               setPage('register');
@@ -54,7 +76,7 @@ export const TopBar = (obj) => {
             <Typography variant="h6">公司注册服务</Typography>
           </Button>
           <Button
-            sx={{ my: 2, color: 'white', display: 'block' }}
+            sx={{ my: 2, color: 'white', display: 'block', minWidth: 130 }}
             id="immigration"
             onClick={() => {
               setPage('immigration');
@@ -63,7 +85,7 @@ export const TopBar = (obj) => {
             <Typography variant="h6">移民投资咨询</Typography>
           </Button>
           <Button
-            sx={{ my: 2, color: 'white', display: 'block' }}
+            sx={{ my: 2, color: 'white', display: 'block', minWidth: 90 }}
             id="business"
             onClick={() => {
               setPage('business');
@@ -72,7 +94,7 @@ export const TopBar = (obj) => {
             <Typography variant="h6">商务运营</Typography>
           </Button>
           <Button
-            sx={{ my: 2, color: 'white', display: 'block' }}
+            sx={{ my: 2, color: 'white', display: 'block', minWidth: 90 }}
             id="news"
             onClick={() => {
               setPage('news');
@@ -81,7 +103,7 @@ export const TopBar = (obj) => {
             <Typography variant="h6">新闻动态</Typography>
           </Button>
           <Button
-            sx={{ my: 2, color: 'white', display: 'block' }}
+            sx={{ my: 2, color: 'white', display: 'block', minWidth: 90 }}
             id="questions"
             onClick={() => {
               setPage('questions');
@@ -90,7 +112,7 @@ export const TopBar = (obj) => {
             <Typography variant="h6">常见问题</Typography>
           </Button>
           <Button
-            sx={{ my: 2, color: 'white', display: 'block' }}
+            sx={{ my: 2, color: 'white', display: 'block', minWidth: 90 }}
             id="aboutUs"
             onClick={() => {
               setPage('aboutUs');
@@ -99,7 +121,7 @@ export const TopBar = (obj) => {
             <Typography variant="h6">关于我们</Typography>
           </Button>
           <Button
-            sx={{ my: 2, color: 'white', display: 'block' }}
+            sx={{ my: 2, color: 'white', display: 'block', minWidth: 90 }}
             id="contactUs"
             onClick={() => {
               setPage('contactUs');
