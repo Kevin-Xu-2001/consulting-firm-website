@@ -3,9 +3,9 @@ import { Container } from '@mui/material';
 
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
-import img1 from '../../../images/slide1.jpeg';
-import img2 from '../../../images/slide2.jpeg';
-import img3 from '../../../images/slide3.jpeg';
+import img1 from '../../../../images/slide1.jpeg';
+import img2 from '../../../../images/slide2.jpeg';
+import img3 from '../../../../images/slide3.jpeg';
 
 const handleDragStart = (e) => e.preventDefault();
 const items = [
@@ -32,7 +32,7 @@ const items = [
 export const Home = () => {
   console.log('home page rendered');
   return (
-    <div style={{ margin: 'auto', width: '100%', padding: '1px' }}>
+    <div style={{ margin: 'auto', width: '100%', paddingTop: '20px' }}>
       <AliceCarousel
         infinite
         mouseTracking

@@ -3,6 +3,7 @@ import { useState } from 'react';
 import React from 'react';
 import TopBar from './components/TopBar';
 import Pages from './components/Pages';
+import Footer from './components/Footer';
 
 export const App = () => {
   const [currentPage, setCurrentPage] = useState('home');
@@ -10,9 +11,10 @@ export const App = () => {
   return (
     <>
       <TopBar setPage={setCurrentPage} currentPage={currentPage} />
-      <Container maxWidth="xl">
+      <Container maxWidth="xl" sx={{ minHeight: '90vh' }}>
         <Pages page={currentPage} />
       </Container>
+      <Footer />
     </>
   );
 };
